@@ -1,51 +1,46 @@
 package nhoxs25.yenvo.newspaperapp.model;
 
 /**
- * Created by yenvo on 08/01/2017.
+ * Created by yenvo on 10/01/2017.
  */
-
 public class RssItem {
     private String title;
     private String description;
     private String date;
     private String link;
-
-    public RssItem(String title, String description, String date, String link) {
-        this.title = title;
-        this.description = description;
-        this.date = date;
-        this.link = link;
+    public RssItem(){
+        this.title = null;
+        this.description = null;
+        this.date = null;
+        this.link = null;
     }
+    public void setTitle(String title){
 
-    public String getTitle() {
+        this.title = title;
+    }
+    public String getTitel(){
+
         return title;
     }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
+    public void setDescription(String description){
         this.description = description;
     }
+    public String getDescription(){
 
-    public String getDate() {
-        return date;
+        return description;
     }
-
-    public void setDate(String date) {
+    public void setDate(String date){
         this.date = date;
     }
+    public String getDate(){
 
-    public String getLink() {
-        return link;
+        return date;
     }
-
-    public void setLink(String link) {
+    public void setLink(String link){
         this.link = link;
+    }
+    public String getLink(){
+
+        return link;
     }
 }
