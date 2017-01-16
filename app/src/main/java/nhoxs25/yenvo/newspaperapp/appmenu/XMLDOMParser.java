@@ -18,8 +18,7 @@ import javax.xml.parsers.ParserConfigurationException;
 
 
 public class XMLDOMParser {
-    public Document getDocument(String xml)
-    {
+    public Document getDocument(String xml) {
         Document document = null;
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         try{
@@ -27,6 +26,8 @@ public class XMLDOMParser {
             InputSource is = new InputSource();
             is.setCharacterStream(new StringReader(xml));
             is.setEncoding("UTF-8");
+            //Dùng phương thức parse của đối tượng builder tạo Document
+            //
             document = db.parse(is);
         }catch(ParserConfigurationException e)
         {
@@ -42,23 +43,5 @@ public class XMLDOMParser {
             return null;
         }
         return document;
-    }
-    public String getValue(Element item, String name)
-    {
-        NodeList nodes = item.getElementsByTagName(name);
-        return this.getTextNodeValue(nodes.item(0));
-    }
-    private final String getTextNodeValue(Node elem) {
-        Node child;
-        if( elem != null){
-            if (elem.hasChildNodes()){
-                for( child = elem.getFirstChild(); child != null; child = child.getNextSibling() ){
-                    if( child.getNodeType() == Node.TEXT_NODE  ){
-                        return child.getNodeValue();
-                    }
-                }
-            }
-        }
-        return "";
     }
 }

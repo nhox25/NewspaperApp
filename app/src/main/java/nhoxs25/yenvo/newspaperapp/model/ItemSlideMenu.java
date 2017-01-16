@@ -12,10 +12,6 @@ public class ItemSlideMenu {
         this.title = title;
     }
 
-    public void setImgId(int imgId) {
-        this.imgId = imgId;
-    }
-
     public void setTitle(String title) {
         this.title = title;
     }

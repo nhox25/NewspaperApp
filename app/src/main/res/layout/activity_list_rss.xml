@@ -9,10 +9,10 @@
         android:id="@+id/main_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <android.support.v7.widget.RecyclerView
+        <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/listTrangWeb"></android.support.v7.widget.RecyclerView>
+            android:id="@+id/listTrangWeb"></ListView>
     </RelativeLayout>
 
     <ListView
